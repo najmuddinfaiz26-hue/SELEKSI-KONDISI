@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+public class tugas2beratbadan {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Berat badan (kg): ");
+        double berat = input.nextDouble();
+
+        System.out.print("Tinggi badan (m): ");
+        double tinggi = input.nextDouble();
+
+        double imt = berat / (tinggi * tinggi);
+        String kategori;
+
+        if (imt <= 18.5) {
+            kategori = "Kurus";
+        } else if (imt <= 25) {
+            kategori = "Normal";
+        } else if (imt <= 30) {
+            kategori = "Gemuk";
+        } else {
+            kategori = "Kegemukan";
+        }
+
+        System.out.printf("IMT = %.2f Termasuk %s\n", imt, kategori);
+
+        input.close();
+    }
+}
+
