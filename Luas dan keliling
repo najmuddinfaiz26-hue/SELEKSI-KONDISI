@@ -1,0 +1,63 @@
+
+
+import java.util.Scanner;
+
+public class tugas1luaskel{
+    public static void main(String[] args) {
+        Scanner A = new Scanner(System.in);
+
+        System.out.println("Menu:");
+        System.out.println("1. menghitung luas dan keliling persegi panjang");
+        System.out.println("2. menghitung luas dan keliling lingkaran");
+        System.out.println("3. menghitung luas dan keliling segitiga");
+
+        System.out.print("\nPilihan anda: ");
+        int pilihan = A.nextInt();
+
+        switch (pilihan) {
+            case 1:
+            // Persegi Panjang
+                System.out.print("Masukkan panjang: ");
+                double p = A.nextDouble();
+                System.out.print("Masukkan lebar: ");
+                double l = A.nextDouble();
+
+                double luasPP = p * l;
+                double kelilingPP = 2 * (p + l);
+
+                System.out.println("Luas persegi panjang : " + luasPP + " cm2");
+                System.out.println("Keliling persegi panjang : " + kelilingPP + " cm");
+                break;
+            case 2:
+            // Lingkaran
+                System.out.print("Masukkan jari-jari: ");
+                double r = A.nextDouble();
+
+                double luasLing = Math.PI * r * r;
+                double kelilingLing = 2 * Math.PI * r;
+
+                System.out.println("Luas lingkaran :" + luasLing + " cm2");
+                System.out.println("Keliling lingkaran :" + kelilingLing + " cm");
+                break;
+            case 3:
+            // Segitiga
+            System.out.print("Masukkan a: ");
+            double a = A.nextDouble();
+            System.out.print("Masukkan b: ");
+            double b = A.nextDouble();
+            System.out.print("Masukkan r (sisi miring): ");
+            double sisiMiring = A.nextDouble();
+            
+            double luasSegitiga = (a * b) / 2;
+            double kelilingSegitiga = a + b + sisiMiring;
+            
+            System.out.println("Keliling Segitiga : " + kelilingSegitiga + " cm");
+            System.out.println("Luas Segitiga : " + luasSegitiga + " cm2");
+                break;
+            default:
+                System.out.println("Data tak ditemukan, program dihentikan ...");
+        }
+
+        A.close();
+    }
+}
