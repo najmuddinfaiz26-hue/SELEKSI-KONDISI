@@ -51,7 +51,7 @@ public class tugas1luaskel{
             double luasSegitiga = (a * b) / 2;
             double kelilingSegitiga = a + b + sisiMiring;
             
-            System.out.println("Keliling Segitiga : " + kelilingSegitiga + " cm");
+            System.out.println("\nKeliling Segitiga : " + kelilingSegitiga + " cm");
             System.out.println("Luas Segitiga : " + luasSegitiga + " cm2");
                 break;
             default:
