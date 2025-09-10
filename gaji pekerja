@@ -1,0 +1,33 @@
+
+
+import java.util.Scanner;
+
+public class tugas3gajipekerja{
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Jam kerja: ");
+        int jam = input.nextInt();
+
+        int upah = jam * 5000;
+        int lembur = 0;
+        int denda = 0;
+
+        if (jam > 60) {
+            lembur = (jam - 60) * 6000;
+            upah = 60 * 5000;
+        } else if (jam < 50) {
+            denda = (50 - jam) * 1000;
+        }
+
+        int total = upah + lembur - denda;
+
+        System.out.println("Upah    = Rp. " + upah);
+        System.out.println("Lembur  = Rp. " + lembur);
+        System.out.println("Denda   = Rp. " + denda);
+        System.out.println("-------------------");
+        System.out.println("Total   = Rp. " + total);
+
+        input.close();
+    }
+}
